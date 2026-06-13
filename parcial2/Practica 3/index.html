@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Guardar Usuario</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        a {
+            color: #008CBA;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #005f73;
+        }
+    </style>
+    <script>
+        function limpiarCampos() {
+            document.getElementById("nombre").value = "";
+        }
+    </script>
+</head>
+<body>
+    <h4>Jose Alejandro Meneses Mendivil </h4>
+    <h2>Guardar usuario</h2>
+    <form id="guardadito" action="guardar.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input type="submit" value="Guardar">
+        <input type="button" onclick="limpiarCampos()" value="Limpiar">
+    </form>
+    <h4>Haz clic en el siguiente enlace para ver los datos almacenados:</h4>
+    <a href="muestra.php">Ver Datos</a>
+</body>
+</html>
