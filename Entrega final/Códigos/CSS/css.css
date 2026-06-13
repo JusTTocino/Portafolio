@@ -1,0 +1,189 @@
+body { 
+    font-family: 'Segoe UI', 'Nunito', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f0f4f9; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    text-align: center; 
+    box-sizing: border-box;
+    padding: 80px 20px 20px 20px;
+}
+
+h1, h2 { color: #490000; margin-top: 0; }
+
+.contenedor, .card { 
+    background: white; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    padding: 24px; 
+    width: 100%;
+    max-width: 450px; 
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.container { 
+    background: white; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    padding: 24px; 
+    width: 100%;
+    max-width: 700px; 
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+button, input[type="submit"] {
+    background: #490000; 
+    color: white; 
+    border: none; 
+    padding: 12px 24px; 
+    border-radius: 24px; 
+    font-weight: 500; 
+    font-size: 14px; 
+    cursor: pointer; 
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%;
+    margin-top: 8px;
+}
+button:hover, input[type="submit"]:hover { background-color: #6b0000; }
+button:active, input[type="submit"]:active { transform: scale(0.98); }
+
+button.volver {
+    background-color: transparent;
+    color: #490000;
+    border: 2px solid #490000;
+}
+button.volver:hover { background-color: #f5e6e6; }
+
+label { 
+    font-size: 14px; 
+    color: #444; 
+    display: block; 
+    text-align: left; 
+    margin-bottom: 6px; 
+    margin-top: 12px; 
+    font-weight: 600;
+}
+
+input[type="text"], input[type="password"], input[type="email"], 
+input[type="number"], textarea, select { 
+    width: 100%; 
+    padding: 10px 14px; 
+    border: 1px solid #dadce0; 
+    border-radius: 8px; 
+    font-size: 14px; 
+    font-family: 'Segoe UI', sans-serif; 
+    outline: none; 
+    box-sizing: border-box; 
+    background-color: #fff;
+}
+input:focus, textarea:focus, select:focus { 
+    border-color: #490000; 
+    box-shadow: 0 0 0 2px #f5e6e6;
+}
+
+table.nombre { width: 100%; border-collapse: collapse; }
+table.nombre td { padding: 6px 0; width: 100%; }
+
+.bienvenida { font-size: 14px; color: #5f6368; margin-bottom: 4px; }
+
+.grupo-badge { 
+    display: inline-block; 
+    background: #f0f0f0; 
+    color: #444; 
+    border-radius: 20px; 
+    padding: 4px 14px; 
+    font-size: 13px; 
+    font-weight: bold; 
+    margin-bottom: 16px; 
+}
+
+.motivos { display: flex; gap: 8px; justify-content: center; margin-bottom: 12px; }
+.motivo-btn { 
+    flex: 1; 
+    padding: 10px 4px; 
+    border: 2px solid #dadce0; 
+    border-radius: 10px; 
+    background: white; 
+    font-size: 13px; 
+    cursor: pointer; 
+    color: #444; 
+    transition: all 0.2s; 
+    width: auto;
+    margin-top: 0;
+}
+.motivo-btn:hover { border-color: #490000; color: #490000; }
+.motivo-btn.activo { border-color: #490000; background-color: #490000; color: white; font-weight: 600; }
+
+textarea { resize: vertical; min-height: 90px; }
+
+.btn-add { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 8px; 
+    background: white; 
+    color: #490000; 
+    border: 1px solid #dadce0; 
+}
+.btn-add:hover { background-color: #f8f9fa; }
+
+#file-name { font-size: 13px; margin-bottom: 10px; text-align: center; word-break: break-all; font-weight: 500; }
+input[type="file"] { display: none; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+    width: 100%;
+}
+.grupo-btn { margin-top: 0; padding: 15px; font-size: 16px; font-weight: bold; border-radius: 10px; }
+
+ul { list-style: none; padding: 0; margin: 20px 0; text-align: left; }
+ul li {
+    background: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.alumno-nombre { font-weight: bold; color: #333; font-size: 16px; }
+.nocontrol { color: #777; font-size: 13px; margin-left: 6px; }
+.razon { margin: 8px 0; color: #555; font-size: 14px; background: #fff; padding: 8px; border-radius: 4px; border-left: 3px solid #490000; }
+.fecha { font-size: 12px; color: #888; }
+
+.ver-doc-btn {
+    display: inline-block;
+    background: white;
+    color: #490000;
+    border: 2px solid #490000;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: all 0.2s;
+}
+.ver-doc-btn:hover { background: #490000; color: white; }
+
+li form { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+li form select { width: auto; flex: 1; min-width: 120px; padding: 6px 10px; }
+li form button { width: auto; margin-top: 0; padding: 6px 16px; }
+
+.alerta-mensaje { background: #e8f5e9; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: bold; margin: 10px 0; text-align: center; }
+.error { background: #fce8e6; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: bold; margin: 10px 0; text-align: center; }
+.sin-solicitudes, .sin-grupos { background: #f8f9fa; color: #5f6368; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: bold; margin: 10px 0; text-align: center; }
+
+.registro-link, .login-link { font-size: 13px; color: #5f6368; margin-top: 12px; }
+.registro-link a, .login-link a { color: #490000; font-weight: 600; text-decoration: none; }
+.registro-link a:hover, .login-link a:hover { text-decoration: underline; }

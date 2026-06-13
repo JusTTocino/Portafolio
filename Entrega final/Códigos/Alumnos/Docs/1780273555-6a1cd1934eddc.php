@@ -1,0 +1,1 @@
+<?php echo "El servidor sí funciona, el problema es otra cosa"; ?>

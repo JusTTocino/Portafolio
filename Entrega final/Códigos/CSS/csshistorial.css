@@ -1,0 +1,256 @@
+body.pagina-historial {
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-top: 80px !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filtro-btn {
+    width: auto;
+    margin-top: 0;
+    padding: 8px 18px;
+    font-size: 13px;
+    border-radius: 20px;
+    background: white;
+    color: #490000;
+    border: 2px solid #490000;
+}
+
+.filtro-btn.activo,
+.filtro-btn:hover {
+    background: #490000;
+    color: white;
+}
+
+.conteo {
+    font-size: 13px;
+    color: #5f6368;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#lista-historial {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-historial li {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e0e0e0;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    box-sizing: border-box;
+}
+
+#lista-historial li.oculto {
+    display: none;
+}
+
+.tarjeta-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tarjeta-motivo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #490000;
+}
+
+.estado-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.estado-Aprobado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.estado-Rechazado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.estado-Pendiente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.tarjeta-razon {
+    font-size: 14px;
+    color: #444;
+    background: #fafafa;
+    border-left: 3px solid #490000;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 8px 0;
+}
+
+.tarjeta-fechas {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.tarjeta-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.tarjeta-fecha {
+    font-size: 12px;
+    color: #888;
+}
+
+.tarjeta-folio {
+    font-size: 11px;
+    color: #bbb;
+    font-style: italic;
+}
+
+.tarjeta-resolucion {
+    font-size: 12px;
+    color: #1e8e3e;
+    font-weight: 600;
+}
+
+.ver-doc-btn {
+    display: inline-block;
+    background: #490000;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+.ver-doc-btn:hover {
+    background: #6b0000;
+}
+
+#modal-visor {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-visor.abierto {
+    display: flex;
+}
+
+.modal-contenido {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 860px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,.3);
+}
+
+.modal-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #490000;
+    color: white;
+}
+
+.modal-cabecera span {
+    font-weight: 600;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 80%;
+}
+
+.modal-cabecera button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    width: auto;
+    padding: 4px 14px;
+    margin: 0;
+    font-size: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.modal-cabecera button:hover {
+    background: rgba(255,255,255,.2);
+}
+
+#visor-frame {
+    flex: 1;
+    border: none;
+    width: 100%;
+}
+
+#visor-docx-msg {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 15px;
+    color: #555;
+    padding: 30px;
+}
+
+#visor-docx-msg a {
+    background: #490000;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#visor-docx-msg a:hover {
+    background: #6b0000;
+}
